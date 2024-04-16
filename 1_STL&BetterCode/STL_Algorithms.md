@@ -54,5 +54,35 @@ Heap is a data structure that have the parent data that is bigger and node that 
 ```
 - sort two merged sorted container
 ```cpp 
-    std::inplace_merge(begin(a),end(a), x); //sort x
+    std::inplace_merge(begin(a),middle , end(a)); // middle is the boundary of the containers
 ```
+
+## Region of Partitioning
+
+Partition is parting the same data structure towards the one side. for ex. binary 0 and 1. 
+
+- partition with p as binary check, true first, false last.
+```cpp 
+    std::partition(begin(a),end(a), p);
+```
+- to return the boundary of partition:
+```cpp 
+    std::partition_point(begin(a),end(a), x); //sort x
+```
+## Other Permutation
+
+- move element last to first
+```cpp 
+    std::rotate(begin(a),middle(a), end(a)); // middle is the first element of the new container.
+``` 
+
+- random move
+```cpp 
+    std::shuffle(begin(a),middle(a)); 
+``` 
+- reverses the container
+```cpp 
+    std::reverse(begin(a),middle(a)); 
+``` 
+
+## Secret Ruins

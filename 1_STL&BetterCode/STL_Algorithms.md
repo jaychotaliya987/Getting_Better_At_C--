@@ -86,3 +86,49 @@ Partition is parting the same data structure towards the one side. for ex. binar
 ``` 
 
 ## Secret Ruins
+
+- Stable_* - preserve the order
+    - `stable_sort()`
+    - `stable_partition()`
+
+- is_* - return boolean if true
+    - `is_sorted()`
+    - `is_partitioned()`
+    - `is_heap()`
+
+- is_*_until - returns the position when the condition is not true
+    - `is_sorted_until()`
+    - `is_partitioned_until()`
+    - `is_heap_until()`
+
+## Lands of Queries
+
+- `count()` - gets the count of the element occurs in the dataset.
+-  to add elements or to do any binary operations on the container we can use :
+```cpp
+accumulate(begin, end, initial_sum, Binary_func )
+reduce(begin, end, initial_sum, Binary_func ) // this allows parallelization
+```
+- there is also `transform_reduce()` that applies function before  accumulate
+- `partial sum` sums the elements but preserve the last, ex: `sum n = ... + n-2 + n-1 + nth`
+    - `inclusive_scan` - runs in parallel
+    - `exclusive_scan` - does not include the last element ex: `sum n = ... + n-2 + n-1`
+    - both have transform variants - `transform_inclusive_scan()`, `transform_exclusive_scan()`, applies function before the operation.
+- `inner_product()` 
+- `adjacent_difference()` - gives the difference of the two adjacent elements 
+- `sample(n)` - generate collection with n elements selected randomly.
+
+- `all_of()` - returns true if all elements satisfy the conditional
+- `any_of()` - returns true if any one elements satisfy the conditional
+- `none_of()` - returns true if none elements satisfy the conditional
+- `equal()` - returns true if all elements matches and equal in size the conditional
+- `lexicographical_compare()` - returns true if first one is smaller as in dictionary 
+- `mismatch()` - returns pair of iterator where first mismatch is encountered
+- unsorted collection-
+    - `find()` - returns position of first occurrence of the searched value.
+    - `adjacent_find()` - returns position first occurrence of the first searched value of two adjacent equal value.
+    - 
+
+
+
+

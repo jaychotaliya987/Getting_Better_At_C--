@@ -1,6 +1,7 @@
 ## G1 - No raw loops
 - Difficulty reading.
 - Performance Problem.
+- 9 times out of 10, a for-loop should either be the only code in a function, or the only code in the loop should be a function (or both).
 
 ### Alternatives to Raw Loops
 - Use algorithms in STL.
@@ -36,3 +37,8 @@ for (const auto& e:r) f(e);
 - Less work more efficiency, Do not waste resources doing things that are not supposed to be done.
 - Data Structures gives the performance, Linked list is slower then vector in almost all the tasks.
 - Use contiguous, dense data structures. That promotes usage of L1, L2 and L3 caches. Caches are faster than main memory.
+
+
+## G7 - No Incidental data structure
+- 
+- 
